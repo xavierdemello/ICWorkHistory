@@ -16,6 +16,7 @@ namespace WorkHistory
     {
 
         private static Home _homeForm = null;
+        private static HistoryResult _historyResultForm = null;
 
         private Home HomeForm
         {
@@ -27,6 +28,19 @@ namespace WorkHistory
                 }
 
                 return _homeForm;
+            }
+        }
+        
+        private HistoryResult HistoryForm
+        {
+            get
+            {
+                if (_historyResultForm == null)
+                {
+                    _historyResultForm = new HistoryResult();
+                }
+
+                return _historyResultForm;
             }
         }
 
@@ -53,6 +67,19 @@ namespace WorkHistory
             pContainer.Controls.Add(HomeForm);
             HomeForm.BringToFront();
             HomeForm.Show();
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            HistoryForm.TopLevel = false;
+            if (pContainer.Controls.Count > 0)
+            {
+                pContainer.Controls.Clear();
+            }
+
+            pContainer.Controls.Add(HistoryForm);
+            HistoryForm.BringToFront();
+            HistoryForm.Show();
         }
     }
 }

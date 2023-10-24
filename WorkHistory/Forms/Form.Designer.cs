@@ -77,6 +77,7 @@
             this.btnHistory.Text = "Historial";
             this.btnHistory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHistory.UseVisualStyleBackColor = true;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // btnHome
             // 

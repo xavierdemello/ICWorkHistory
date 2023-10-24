@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtHours
@@ -44,7 +45,8 @@
             this.txtHours.Location = new System.Drawing.Point(268, 200);
             this.txtHours.Name = "txtHours";
             this.txtHours.Size = new System.Drawing.Size(410, 20);
-            this.txtHours.TabIndex = 17;
+            this.txtHours.TabIndex = 3;
+            this.txtHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHours_KeyPress);
             // 
             // label3
             // 
@@ -61,16 +63,17 @@
             this.btnSave.Location = new System.Drawing.Point(543, 319);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(135, 40);
-            this.btnSave.TabIndex = 15;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtObservation
             // 
             this.txtObservation.Location = new System.Drawing.Point(268, 260);
             this.txtObservation.Name = "txtObservation";
             this.txtObservation.Size = new System.Drawing.Size(410, 20);
-            this.txtObservation.TabIndex = 14;
+            this.txtObservation.TabIndex = 4;
             // 
             // label2
             // 
@@ -87,7 +90,7 @@
             this.txtName.Location = new System.Drawing.Point(268, 148);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(410, 20);
-            this.txtName.TabIndex = 12;
+            this.txtName.TabIndex = 2;
             // 
             // label1
             // 
@@ -104,7 +107,7 @@
             this.txtId.Location = new System.Drawing.Point(268, 96);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(410, 20);
-            this.txtId.TabIndex = 10;
+            this.txtId.TabIndex = 1;
             // 
             // lblId
             // 
@@ -116,16 +119,21 @@
             this.lblId.TabIndex = 9;
             this.lblId.Text = "Identificador";
             // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(124, 346);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 13);
+            this.lblResult.TabIndex = 18;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.txtHours);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSave);
@@ -135,7 +143,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,5 +163,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblResult;
     }
 }

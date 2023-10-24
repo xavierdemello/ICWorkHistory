@@ -10,3 +10,4 @@ D:\repositories\ICWorkHistory\WorkHistory\obj\Debug\WorkHistory.csproj.CoreCompi
 D:\repositories\ICWorkHistory\WorkHistory\obj\Debug\WorkHistory.exe
 D:\repositories\ICWorkHistory\WorkHistory\obj\Debug\WorkHistory.pdb
 D:\repositories\ICWorkHistory\WorkHistory\obj\Debug\WorkHistory.Forms.Home.resources
+D:\repositories\ICWorkHistory\WorkHistory\obj\Debug\WorkHistory.Forms.HistoryResult.resources

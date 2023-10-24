@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WorkHistory" Class="HistoryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-C6TOJU0\SQLEXPRESS;Initial Catalog=WorkHistory;Integrated Security=True" SettingsObjectName="WorkHistory.Properties.Settings" SettingsPropertyName="WorkHistoryConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.AddHistory" Method="AddHistory">
+    <Parameter Name="WorkItemId" Parameter="workItemId" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(255)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Hours" Parameter="hours" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="Resultado" Parameter="resultado" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
